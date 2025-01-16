@@ -9,9 +9,9 @@ const options =  {
 };
 
 
-export const getSpotify = async (type:string) => {
+export const getSpotify = async (query:string) => {
     try {
-        const response = await fetch(`https://spotify23.p.rapidapi.com/search/?q=test&type=${type}&offset=0&limit=20&numberOfTopResults=5`, options);
+        const response = await fetch(`https://spotify23.p.rapidapi.com/search/?q=${query}&type=tracks&offset=0&limit=20&numberOfTopResults=5`, options);
         const data:ISpotify = await response.json();
         return data;
     } catch (error) {

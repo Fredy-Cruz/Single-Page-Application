@@ -1,27 +1,76 @@
-.container{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Contenedor principal */
+.container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
 }
 
-.track{
+/* Estilos básicos para cada track */
+.track {
     display: flex;
     flex-direction: row;
     border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgb(34,193,195);
+    box-shadow: 0 2px 4px rgba(34, 193, 195, 0.5);
     padding: 5px;
     gap: 1rem;
+    align-items: center;
+    background: white;
+    transform: scale(0.95);
+    transition: transform 1s ease;
 }
 
-.track_cover{
+/* Hover con escalado y animación de fondo */
+.track:hover {
+    transform: scale(1.0);
+    background: linear-gradient(135deg, white, rgb(34, 192, 195));
+}
+
+/* Estilo de la portada del track */
+.track_cover {
     width: 150px;
     height: 150px;
+    object-fit: contain;
 }
 
-.track_cover img{
+.track_cover img {
     border-radius: 0.5rem;
 }
+
+/* Contenedor de datos del track */
+.track_data {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.track_data h2 {
+    font-size: 2rem;
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+}
+
+.track_data label {
+    display: flex;
+    font-size: 1rem;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    gap: 5px;
+}
+
+.track_data h3 {
+    font-size: 1rem;
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+}
+
+.track_data span {
+    display: flex;
+    flex-direction: column;
+}
+
 
 /*-----------------------------------MEDIA-QUERY-------------------------------------*/
 

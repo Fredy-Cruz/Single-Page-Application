@@ -4,15 +4,15 @@ import { getSpotify } from "../../services/spotify.services";
 import styles from "./Tracks.module.css";
 
 const Tracks = () => {
-  const [type, setType] = useState("");
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
-    setType("tracks");
+    setQuery("Crush 40");
   }, []);
 
-  const fetcher = () => getSpotify(type);
+  const fetcher = () => getSpotify(query);
 
-  const { data: spotify } = useSWR(`/search/?q=test&type=${type}&offset=0&limit=10&numberOfTopResults=5`, fetcher);
+  const { data: spotify } = useSWR(`/search/?q=${query}&type=tracks&offset=0&limit=10&numberOfTopResults=5`, fetcher);
 
   return (
     <div className={styles.container}>
@@ -24,9 +24,12 @@ const Tracks = () => {
           <div className={styles.track_data}>
             <h2>{track.data.name}</h2>
             <label> Artist:
-              {track.data.artists.items.map((artist) =>(
-              <h3 key={artist.uri}>{artist.profile.name}</h3>
-            ))}
+              <span>
+                {track.data.artists.items.map((artist) =>(
+                  <h3 key={artist.uri}>{artist.profile.name}</h3>
+                ))}
+              </span>
+              
             </label>
           </div>
         </div>
