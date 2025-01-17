@@ -2,6 +2,7 @@
 
 .nav {
     display: grid;
+    width: 100%;
     justify-content: space-around;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
