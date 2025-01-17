@@ -1,6 +1,6 @@
 import Navbar from "../shared/components/Navbar/Navbar";
 import Tracks from "./components/Tracks";
-import styles from "./Home.module.css"
+import styles from "./HomePage.module.css"
 
 export const HomePage = () => {
 
