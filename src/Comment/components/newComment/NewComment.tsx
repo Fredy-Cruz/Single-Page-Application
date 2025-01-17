@@ -54,8 +54,8 @@ const NewComment = () => {
         <label>
           Rate the page:
           <Stars
-            value={0} // Valor inicial
-            onChange={(value) => setValue("stars", value)} // Actualizar "stars" en el formulario
+            value={3}
+            onChange={(value) => setValue("stars", value)}
           />
           {errors.stars && <span>Rating is required</span>}
         </label>

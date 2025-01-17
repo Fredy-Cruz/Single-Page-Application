@@ -12,12 +12,9 @@ export const newComent = async(comment:INewComment) =>{
             },
             body: JSON.stringify(comment)      
         });
-
         const data = await response.json();
         return data;
-
     }catch(error){
-        console.log("aaaaah")
         throw error;
     }
 }
