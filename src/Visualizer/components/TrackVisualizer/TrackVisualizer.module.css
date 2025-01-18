@@ -11,7 +11,7 @@
     border: 1px solid #130c25;
     box-shadow: 0 10px 10px #130c25;
 
-    background: rgba(76,45,253,1); /* Fallback for browsers that don't support gradients */
+    background: rgba(76,45,253,1);
   background: linear-gradient(
     135deg,
     rgb(34,193,195) 25%,

@@ -4,6 +4,7 @@ import { getSpotify } from "../../services/spotify.services";
 import styles from "./Tracks.module.css";
 import Loader from "../../shared/components/Loading/Loader";
 import { Link } from "react-router";
+import PlayButton from "../../shared/components/PlayButton/PlayButton";
 
 const Tracks = () => {
   const [query, setQuery] = useState("");
@@ -45,6 +46,9 @@ const Tracks = () => {
                 ))}
               </span>
             </label>
+          </div>
+          <div className={styles.play}>
+            <PlayButton track={track.data}/>
           </div>
         </div>
       </Link>

@@ -10,6 +10,11 @@
     margin: 1rem;
 }
 
+.container a{
+    text-decoration: none;
+    color: #130c25; 
+}
+
 .search{
     width: 100%;
     height: 2rem;
@@ -44,8 +49,10 @@
 
 /* Estilo de la portada del track */
 .track_cover {
-    width: 150px;
-    height: 150px;
+    max-width: 150px;
+    min-width: 150px;
+    max-height: 150px;
+    min-height: 150px;
     object-fit: contain;
     align-content: center;
 }
@@ -59,6 +66,7 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    width: 100%;;
 }
 
 .track_data h2 {
@@ -86,6 +94,13 @@
     flex-direction: column;
 }
 
+.play{
+    min-width: 150px;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
+    justify-self: flex-end;
+}
 
 /*-----------------------------------MEDIA-QUERY-------------------------------------*/
 
