@@ -3,6 +3,7 @@ import useSWR from "swr";
 import { getSpotify } from "../../services/spotify.services";
 import styles from "./Tracks.module.css";
 import Loader from "../../shared/components/Loading/Loader";
+import { Link } from "react-router";
 
 const Tracks = () => {
   const [query, setQuery] = useState("");
@@ -26,21 +27,28 @@ const Tracks = () => {
       }
 
       {spotify?.tracks.items.map((track) =>(
-        <div key={track.data.id} className={styles.track}>
+        <Link
+        key={track.data.id}
+        to={`/${track.data.id}`}
+        state={{ track: track.data }}
+      >
+        <div className={styles.track}>
           <figure className={styles.track_cover}>
-            <img src={track.data.albumOfTrack.coverArt.sources[0].url}/>
+            <img src={track.data.albumOfTrack.coverArt.sources[0].url} alt={track.data.name} />
           </figure>
           <div className={styles.track_data}>
             <h2>{track.data.name}</h2>
             <label> Artist:
               <span>
-                {track.data.artists.items.map((artist) =>(
+                {track.data.artists.items.map((artist) => (
                   <h3 key={artist.uri}>{artist.profile.name}</h3>
                 ))}
-              </span>  
+              </span>
             </label>
           </div>
         </div>
+      </Link>
+      
       ))}
     </div>
   );

@@ -3,6 +3,7 @@ import './App.css'
 import { HomePage } from './Home/HomePage'
 import { CommentPage } from './Comment/CommentPage'
 import { NotFoundPage } from './shared/components/NotFound/NotFoundPage'
+import { VisualizerPage } from './Visualizer/VisualizerPage'
 
 function App() {
 
@@ -12,8 +13,16 @@ function App() {
       element: <HomePage/>
     },
     {
+      path: "/:id",
+      element: <VisualizerPage/>
+    },
+    {
       path: '/comment',
       element: <CommentPage/>
+    },
+    {
+      path: '/test',
+      element: <VisualizerPage/>
     },
     {
       path: "*",
