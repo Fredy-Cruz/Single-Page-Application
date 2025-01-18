@@ -30,7 +30,7 @@ const Tracks = () => {
         <Link
         key={track.data.id}
         to={`/${track.data.id}`}
-        state={{ track: track.data }}
+        state={{ track: track.data}}
       >
         <div className={styles.track}>
           <figure className={styles.track_cover}>

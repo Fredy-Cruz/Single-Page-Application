@@ -1,0 +1,84 @@
+.container{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    max-width: 700px;
+    border: 1px solid #130c25;
+    box-shadow: 0 10px 10px #130c25;
+
+    background: rgba(76,45,253,1); /* Fallback for browsers that don't support gradients */
+  background: linear-gradient(
+    135deg,
+    rgb(34,193,195) 25%,
+    rgba(34, 192, 195, 0.825) 25%,
+    rgba(34, 192, 195, 0.825) 50%,
+    rgb(34,193,195) 50%,
+    rgb(34,193,195) 75%,
+    rgba(34, 192, 195, 0.825) 75%,
+    rgba(34, 192, 195, 0.825)
+  );
+  background-size: 150px 150px;
+
+}
+
+.container figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    object-fit: cover;
+    padding: 1rem 0 1rem 0;
+}
+
+.container img{
+    border-radius: 0.5rem;
+    border: 1px solid #130c25;
+}
+
+.container label{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    color: #130c25;
+    font-size: 1rem;
+    font-family: "Exo 2", serif;
+    font-weight: 500;
+    padding: 1rem 0 0 0;
+    gap: 10px;
+}
+
+
+/*-----------------------------------MEDIA-QUERY-------------------------------------*/
+
+/*Small screens*/
+@media (min-width: 320px) and (max-width: 480px){
+    .container{
+        width: 97%;
+    }
+}
+
+/*Smartphones*/
+@media (min-width: 481px) and (max-width: 768px){
+    .container{
+        width: 95%;
+    }
+}
+
+/*tablet ad landscape*/
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape){
+    .container{
+        width: 80%;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 1025px) and (max-width: 1280px){
+    .container{
+        width: 80%;
+    }
+}

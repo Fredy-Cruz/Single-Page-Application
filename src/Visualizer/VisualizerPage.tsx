@@ -1,28 +1,34 @@
-import { useLocation, useNavigate } from "react-router";
+import { useLocation } from "react-router";
 import Navbar from "../shared/components/Navbar/Navbar";
 import styles from "./VisualizerPage.module.css";
+import { NotFoundPage } from "../shared/components/NotFound/NotFoundPage";
+import { HilariousData } from "../interfaces/spotify.interfaces";
+import TrackVisualizer from "./components/TrackVisualizer/TrackVisualizer";
+
+interface LocationState {
+    state: {
+      track: HilariousData;
+    };
+  }
+  
 
 export const VisualizerPage = () => {
+    
+    const location = useLocation() as LocationState;
+  
+    const { track } = location.state || {};
 
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const { track } = location.state || {};
+  if (!track) {
+    return (
+      <NotFoundPage/>
+    );
+  }
 
   return (
     <main className={styles.main}>
       <Navbar />
+      <TrackVisualizer track={track}/>
 
-      <div>
-        <h1>{track.name}</h1>
-        <p>Album: {track.albumOfTrack.name}</p>
-        <p>Duration: {track.duration.totalMilliseconds} ms</p>
-        <img
-          src={track.albumOfTrack.coverArt.sources[0].url}
-          alt={track.name}
-        />
-        <button onClick={() => navigate(-1)}>Go Back</button>
-      </div>
     </main>
   );
 };
