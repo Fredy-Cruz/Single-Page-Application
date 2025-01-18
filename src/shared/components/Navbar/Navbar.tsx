@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
@@ -13,9 +14,8 @@ const Navbar = () => {
     </div>
 
     <div className={styles.items}>
-        <a href="#home">Tracks</a>
-        <a href="#home">Playlist</a>
-        <a href="#services">About</a>
+        <Link to="/">Tracks</Link>
+        <Link to="/comment">Leave a comment</Link>
     </div>
 </nav>
 

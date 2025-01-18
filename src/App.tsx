@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import './App.css'
 import { HomePage } from './Home/HomePage'
 import { CommentPage } from './Comment/CommentPage'
+import { NotFoundPage } from './shared/components/NotFound/NotFoundPage'
 
 function App() {
 
@@ -13,6 +14,10 @@ function App() {
     {
       path: '/comment',
       element: <CommentPage/>
+    },
+    {
+      path: "*",
+      element: <NotFoundPage/>
     }
   ])
 

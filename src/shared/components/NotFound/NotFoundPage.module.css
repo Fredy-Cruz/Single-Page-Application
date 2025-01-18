@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text{
+    height: 100px;
+    font-size: 3rem;
+    font-family: "Exo 2", serif;
+    font-weight: 900;
+    color: #130c25;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    width: 200px;
+    height: 3rem;
+    background-color: white;
+    align-items: center;
+    border: solid 1px gray;
+    transition: 1s ease;
+    
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Exo 2", serif;
+    font-weight: 700;
+    color: #130c25;
+
+    text-align: center;
+    align-content: center;
+}
+ 
+.button:hover{
+    background-color: rgb(34,193,195);
+    color: white;
+    border: rgb(34,193,195);
+}
+
+/*-----------------------------------MEDIA-QUERY-------------------------------------*/
+
+/*Small screens*/
+@media (min-width: 320px) and (max-width: 480px){
+    .container{
+        width: 97%;
+    }
+}
+
+/*Smartphones*/
+@media (min-width: 481px) and (max-width: 768px){
+    .container{
+        width: 95%;
+    }
+}
+
+/*tablet ad landscape*/
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape){
+    .container{
+        width: 80%;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 1025px) and (max-width: 1280px){
+    .container{
+        width: 80%;
+    }
+}
