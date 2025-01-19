@@ -4,6 +4,7 @@ import styles from "./VisualizerPage.module.css";
 import { NotFoundPage } from "../shared/components/NotFound/NotFoundPage";
 import { HilariousData } from "../interfaces/spotify.interfaces";
 import TrackVisualizer from "./components/TrackVisualizer/TrackVisualizer";
+import Footer from "../shared/components/Footer/Footer";
 
 interface LocationState {
     state: {
@@ -28,6 +29,7 @@ export const VisualizerPage = () => {
     <main className={styles.main}>
       <Navbar />
       <TrackVisualizer track={track}/>
+      <Footer/>
 
     </main>
   );

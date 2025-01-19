@@ -12,7 +12,7 @@ const Loader = () => {
 
 const StyledWrapper = styled.div`
   .container {
-    width: 3.25em;
+    width: 5rem;
     transform-origin: center;
     animation: rotate4 2s linear infinite;
     justify-content: center;

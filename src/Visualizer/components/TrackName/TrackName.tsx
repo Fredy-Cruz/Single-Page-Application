@@ -23,14 +23,12 @@ const StyledWrapper = styled.div`
     height: auto;
     text-align: center;
 
-
-
     color: rgba(76, 45, 253, 1);
     background: linear-gradient(to right, #130c25 0, rgb(22, 92, 93) 10%, #130c25 20%);
     background-position: 0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 3s infinite linear;
+    animation: shine 10s infinite linear;
     animation-fill-mode: forwards;
     -webkit-text-size-adjust: none;
     font-weight: 900;

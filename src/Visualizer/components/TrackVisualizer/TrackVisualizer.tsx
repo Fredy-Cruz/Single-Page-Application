@@ -4,12 +4,14 @@ import styles from "./TrackVisualizer.module.css"
 import TrackName from "../TrackName/TrackName";
 import PlayButton from "../../../shared/components/PlayButton/PlayButton";
 
+//Interfaz para el prop
 interface Props {
   track: HilariousData;
 }
 
 const TrackVisualizer: React.FC<Props> = ({track}) => {
 
+  //Constantes para dar formato a la duracion
   const minutes:number = Math.floor(track.duration.totalMilliseconds / 60000); 
   const seconds:number = Math.floor((track.duration.totalMilliseconds % 60000) / 1000); 
 

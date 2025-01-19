@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+.footer {
+  position : fixed;
+  bottom: 0;
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 1rem;
+  background: rgb(34, 193, 195);
+  background: -moz-linear-gradient(
+    270deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(76, 45, 253, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    270deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(76, 45, 253, 1) 100%
+  );
+  background: linear-gradient(
+    270deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(76, 45, 253, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#4c2dfd",GradientType=1);
+  box-shadow: 2px rgb(34, 193, 195);
+
+  font-family: "Exo 2", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #130c25;
+}

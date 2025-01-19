@@ -5,6 +5,8 @@ import { INewComment } from "../../../interfaces/INewComment";
 import { newComent } from "../../../services/newComment.services";
 
 const NewComment = () => {
+
+  //React-Hook-Form
   const {
     register,
     handleSubmit,
@@ -13,30 +15,32 @@ const NewComment = () => {
     reset,
   } = useForm<INewComment>();
 
+  //Call to the newComment Service
   const onSubmit = async (data: INewComment) => {
-    console.log(data);
     try {
       await newComent(data);
       reset();
-    } catch (error) {
-      console.log(error);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {;
+      reset();
+      return (<h2>Something went wrong, try again later</h2>);
     }
   };
 
   return (
     <div className={styles.container}>
-      <h2>Leave a Comment to this web site!</h2>
+      <h2>Leave a Comment about this web site!</h2>
 
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <label>
           Title for the comment:
           <input
             type="text"
-            {...register("title", { required: true, minLength: 8, maxLength: 40 })}
+            {...register("title", { required: true, minLength: 4, maxLength: 60 })}
           />
           {errors.title?.type === "required" && <span>The title is required</span>}
           {(errors.title?.type === "minLength" || errors.title?.type === "maxLength") && (
-            <span>The title must be 8 to 40 chars long</span>
+            <span>The title must be 4 to 60 chars long</span>
           )}
         </label>
         <label>

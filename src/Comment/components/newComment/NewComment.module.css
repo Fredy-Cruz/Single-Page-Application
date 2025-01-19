@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/*contendore principal*/
 .container{
     display: flex;
     flex-direction: column;
@@ -12,8 +13,10 @@
     color: #130c25;
     font-family: "Montserrat", serif;
     font-weight: 500;
+    text-align: center;
 }
 
+/*Formualrio*/
 .form{
     display: flex;
     flex-direction: column;
@@ -53,6 +56,11 @@
     background-color: rgb(34,193,195);
     color: white;
     border: rgb(34,193,195);
+}
+
+.form span{
+    font-size: 0.7rem;
+    color: red;
 }
 
 /*-----------------------------------MEDIA-QUERY-------------------------------------*/

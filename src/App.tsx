@@ -7,6 +7,7 @@ import { VisualizerPage } from './Visualizer/VisualizerPage'
 
 function App() {
 
+  //Enrutamiento de la SPA
   const router = createBrowserRouter([
     {
       path: '/',

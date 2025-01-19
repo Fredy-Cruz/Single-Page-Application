@@ -1,36 +1,28 @@
+/*Contendor principal*/
 .container{
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
     margin-top: 1rem;
     border-radius: 2rem;
     max-width: 700px;
     border: 1px solid #130c25;
     box-shadow: 0 10px 10px #130c25;
 
-    background: rgba(76,45,253,1);
-  background: linear-gradient(
-    135deg,
-    rgb(34,193,195) 25%,
-    rgba(34, 192, 195, 0.825) 25%,
-    rgba(34, 192, 195, 0.825) 50%,
-    rgb(34,193,195) 50%,
-    rgb(34,193,195) 75%,
-    rgba(34, 192, 195, 0.825) 75%,
-    rgba(34, 192, 195, 0.825)
-  );
-  background-size: 150px 150px;
+    background-color: #41cbcd;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #41cbcd 40px ), repeating-linear-gradient( #22c0c355, #22c0c3 );
 
 }
 
+/*Cover del album*/
 .container figure{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 550px;
+    width: 100%;
     object-fit: cover;
     padding: 1rem 0 1rem 0;
 }
@@ -40,6 +32,7 @@
     border: 1px solid #130c25;
 }
 
+/*info de la cancion*/
 .container label{
     width: 100%;
     display: flex;
@@ -59,6 +52,7 @@
 @media (min-width: 320px) and (max-width: 480px){
     .container{
         width: 97%;
+        padding: 1rem;
     }
 }
 
@@ -66,6 +60,7 @@
 @media (min-width: 481px) and (max-width: 768px){
     .container{
         width: 95%;
+        padding: 1rem;
     }
 }
 
@@ -73,6 +68,7 @@
 @media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape){
     .container{
         width: 80%;
+        padding: 2rem;
     }
 }
 
@@ -80,5 +76,6 @@
 @media (min-width: 1025px) and (max-width: 1280px){
     .container{
         width: 80%;
+        padding: 2rem;
     }
 }
